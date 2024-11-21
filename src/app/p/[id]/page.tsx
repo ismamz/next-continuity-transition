@@ -15,7 +15,7 @@ export default async function Page({
   if (!item) notFound();
 
   return (
-    <main className="mx-auto max-w-screen-md">
+    <main className="mx-auto max-w-screen-md px-4">
       <div className="py-20">
         <Link href="/">← back to list</Link>
       </div>
