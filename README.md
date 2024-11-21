@@ -4,6 +4,8 @@ This is a demo of [next-transition-router](https://github.com/ismamz/next-transi
 
 [Demo](https://next-continuity-transition.vercel.app/).
 
+https://github.com/user-attachments/assets/2357a02c-6534-4757-945f-6c7bd8c59dc1
+
 ## Getting Started
 
 First, run the development server:
