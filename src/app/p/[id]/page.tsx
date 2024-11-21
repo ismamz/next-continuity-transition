@@ -1,4 +1,4 @@
-import { Box } from "@/app/(components)/box";
+import { Box } from "@/app/box";
 import { data } from "@/app/data";
 import Link from "next/link";
 import { notFound } from "next/navigation";

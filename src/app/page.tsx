@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Box } from "@/app/(components)/box";
+import { Box } from "@/app/box";
 import { data } from "@/app/data";
 
 export default function Home() {
