@@ -1,12 +1,7 @@
 import { Box } from "@/app/(components)/box";
+import { data } from "@/app/data";
 import Link from "next/link";
-
-const colors: { [key: string]: string } = {
-  a: "bg-red-500",
-  b: "bg-blue-500",
-  c: "bg-green-500",
-  d: "bg-yellow-500",
-};
+import { notFound } from "next/navigation";
 
 export default async function Page({
   params,
@@ -15,15 +10,25 @@ export default async function Page({
 }) {
   const { id } = await params;
 
+  const item = data.find((o) => o.name === id);
+
+  if (!item) notFound();
+
   return (
-    <main className="container mx-auto">
-      <div className="py-10">
+    <main className="mx-auto max-w-screen-md">
+      <div className="py-20">
         <Link href="/">← back to list</Link>
       </div>
 
-      <Box color={colors[id] as string} id="final" data-flip-id="test">
+      <Box color={item.color} id="target" data-flip-id="demo">
         {id}
       </Box>
     </main>
   );
+}
+
+export function generateStaticParams() {
+  return data.map((item) => ({
+    id: item.name,
+  }));
 }

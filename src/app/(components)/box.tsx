@@ -8,7 +8,9 @@ interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export function Box({ children, color, ...rest }: BoxProps) {
   const ref = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
+    // avoid flicker
     if (ref.current) ref.current.style.visibility = "visible";
   }, []);
 
