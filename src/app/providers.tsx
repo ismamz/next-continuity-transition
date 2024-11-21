@@ -5,9 +5,6 @@ import { gsap } from "gsap";
 import { useRef, useState } from "react";
 import { cloneElement, flipAnimate } from "./utils";
 
-import Flip from "gsap/Flip";
-gsap.registerPlugin(Flip);
-
 const FLIP_ID = "demo";
 const TARGET_SELECTOR = "#target";
 
